@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Logo y resumen institucional */}
           <div className="lg:col-span-2 space-y-4">
-            <Logo variant="light" />
+            <Logo variant="inverso" orientation="horizontal" size="md" />
             <p className="text-xs text-white/70 max-w-sm leading-relaxed">
               Promovemos la inclusión social, la igualdad de oportunidades y el desarrollo
               integral de personas, familias y comunidades en situación de vulnerabilidad en

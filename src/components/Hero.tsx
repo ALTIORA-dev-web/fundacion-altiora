@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "./Logo";
 import { ArrowUpRight, Heart, Sparkles, MapPin, Users } from "lucide-react";
 
 export default function Hero() {
@@ -79,48 +80,48 @@ export default function Hero() {
 
           {/* Tarjeta Visual de Presentación Institucional */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden text-[#1B2A49] border border-[#EBE3D3] transform lg:rotate-1 hover:rotate-0 transition-transform duration-300">
-              <div className="p-7 space-y-5 bg-[#F7F3EA]/70">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#E0A030]">
-                    Pilar Fundamental
-                  </span>
-                  <span className="text-xs bg-[#1B2A49] text-white px-2.5 py-1 rounded-full font-semibold">
-                    Mendoza
-                  </span>
+            <div className="w-full max-w-md bg-[#F7F3EA] rounded-3xl shadow-2xl overflow-hidden text-[#1B2A49] border border-[#EBE3D3] transform lg:rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="p-8 space-y-6 flex flex-col items-center text-center">
+                {/* Logo vertical oficial según manual */}
+                <div className="py-2">
+                  <Logo orientation="vertical" size="lg" variant="original" />
                 </div>
 
+                <div className="w-12 h-0.5 bg-[#E0A030]"></div>
+
                 <div className="space-y-2">
-                  <h3 className="text-2xl font-bold font-heading text-[#1B2A49]">
-                    Transformar realidades abriendo nuevos caminos
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#E0A030]">
+                    Concepto Institucional
+                  </span>
+                  <h3 className="text-xl font-bold font-heading text-[#1B2A49]">
+                    Ascender abriendo caminos
                   </h3>
-                  <p className="text-sm text-[#4A5568] leading-relaxed">
-                    Creemos en el potencial de cada persona cuando cuenta con las herramientas,
-                    la contención y el acompañamiento necesario para salir adelante.
+                  <p className="text-xs text-[#4A5568] leading-relaxed max-w-xs">
+                    Una identidad que simboliza dirección, avance, impulso y crecimiento compartido en Luján de Cuyo, Mendoza.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="p-3.5 rounded-xl bg-white border border-[#EBE3D3] text-center">
+                <div className="grid grid-cols-2 gap-3 w-full pt-2">
+                  <div className="p-3.5 rounded-2xl bg-white border border-[#EBE3D3] text-center shadow-sm">
                     <span className="block text-2xl font-extrabold text-[#1B2A49] font-heading">
                       100%
                     </span>
-                    <span className="text-xs text-[#4A5568]">Compromiso Social</span>
+                    <span className="text-[11px] text-[#4A5568] font-medium">Compromiso Territorial</span>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-white border border-[#EBE3D3] text-center">
+                  <div className="p-3.5 rounded-2xl bg-white border border-[#EBE3D3] text-center shadow-sm">
                     <span className="block text-2xl font-extrabold text-[#E0A030] font-heading">
                       Auditable
                     </span>
-                    <span className="text-xs text-[#4A5568]">Rendición de cuentas</span>
+                    <span className="text-[11px] text-[#4A5568] font-medium">Gestión Transparente</span>
                   </div>
                 </div>
 
-                <div className="pt-2">
+                <div className="w-full pt-1">
                   <a
                     href="#proyectos"
-                    className="group flex items-center justify-between p-3.5 rounded-xl bg-[#1B2A49] text-white text-sm font-semibold hover:bg-[#253961] transition-colors"
+                    className="group flex items-center justify-between p-3.5 rounded-xl bg-[#1B2A49] text-white text-xs font-bold hover:bg-[#253961] transition-colors w-full"
                   >
-                    <span>Explorar nuestras iniciativas</span>
+                    <span>Conoce nuestras iniciativas</span>
                     <ArrowUpRight className="w-4 h-4 text-[#E0A030] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>

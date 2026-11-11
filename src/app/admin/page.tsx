@@ -68,7 +68,7 @@ export default function AdminPage() {
       <div className="max-w-md w-full mx-auto my-12 bg-white text-[#1B2A49] rounded-3xl p-8 sm:p-10 shadow-2xl border border-white/20">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <Logo />
+            <Logo orientation="vertical" size="md" />
           </div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1B2A49]/5 text-xs font-bold text-[#1B2A49] mb-2">
             <Lock className="w-3.5 h-3.5 text-[#E0A030]" />
