@@ -1,15 +1,17 @@
 import React from "react";
+import Image from "next/image";
 
 interface LogoProps {
   className?: string;
   variant?: "original" | "inverso" | "monocromo";
   orientation?: "horizontal" | "vertical" | "isotipo";
   size?: "sm" | "md" | "lg" | "xl";
+  useImageFile?: boolean;
 }
 
 /**
  * Logotipo Institucional de Fundación ALTIORA
- * Basado estrictamente en el Manual de Identidad Visual Institucional 2026.
+ * Basado estrictamente en los archivos maestros y el Manual de Identidad Visual 2026.
  *
  * Colores oficiales:
  * - Azul profundo: #1B2A49
@@ -21,6 +23,7 @@ export default function Logo({
   variant = "original",
   orientation = "horizontal",
   size = "md",
+  useImageFile = true,
 }: LogoProps) {
   const isDarkBg = variant === "inverso";
 
@@ -31,11 +34,11 @@ export default function Logo({
   const descriptorColor = isDarkBg ? "rgba(255,255,255,0.85)" : "#1B2A49";
 
   // Dimensiones según tamaño
-  const iconSizes = {
-    sm: "w-7 h-7",
-    md: "w-10 h-10",
-    lg: "w-16 h-16",
-    xl: "w-24 h-24",
+  const dimensions = {
+    sm: { px: 28, box: "w-7 h-7" },
+    md: { px: 42, box: "w-10 h-10" },
+    lg: { px: 64, box: "w-16 h-16" },
+    xl: { px: 96, box: "w-24 h-24" },
   };
 
   const textSizes = {
@@ -45,33 +48,50 @@ export default function Logo({
     xl: { title: "text-4xl tracking-[0.3em]", desc: "text-sm tracking-[0.48em]" },
   };
 
-  // ISOTIPO OFICIAL: Dos flechas ascendentes exactas del manual (pág. 4, 10, 15)
-  const renderIsotipo = () => (
-    <svg
-      viewBox="0 0 100 95"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={`${iconSizes[size]} flex-shrink-0 transition-transform duration-200 group-hover:scale-105`}
-      aria-label="Isotipo Fundación ALTIORA: Flechas ascendentes"
-    >
-      {/* Flecha exterior (Azul profundo o Blanco) */}
-      <path
-        d="M 18 78 L 50 24 L 82 78"
-        stroke={outerChevronColor}
-        strokeWidth="11"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      {/* Flecha interior (Dorado Sol) */}
-      <path
-        d="M 33 78 L 50 49 L 67 78"
-        stroke={innerChevronColor}
-        strokeWidth="11"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
+  // Renderizado del Isotipo
+  const renderIsotipo = () => {
+    // Si es fondo claro y tenemos el archivo oficial transparente del diseñador
+    if (useImageFile && !isDarkBg) {
+      return (
+        <div className={`relative ${dimensions[size].box} flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200`}>
+          <Image
+            src="/brand/isotipo-transparente.png"
+            alt="Isotipo Fundación ALTIORA"
+            width={dimensions[size].px}
+            height={dimensions[size].px}
+            className="w-full h-full object-contain"
+            priority
+          />
+        </div>
+      );
+    }
+
+    // Versión vectorial SVG (imprescindible para la versión inversa sobre azul/fondos oscuros)
+    return (
+      <svg
+        viewBox="0 0 100 95"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={`${dimensions[size].box} flex-shrink-0 transition-transform duration-200 group-hover:scale-105`}
+        aria-label="Isotipo Fundación ALTIORA"
+      >
+        <path
+          d="M 18 78 L 50 24 L 82 78"
+          stroke={outerChevronColor}
+          strokeWidth="11"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M 33 78 L 50 49 L 67 78"
+          stroke={innerChevronColor}
+          strokeWidth="11"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  };
 
   if (orientation === "isotipo") {
     return <div className={`inline-flex items-center ${className}`}>{renderIsotipo()}</div>;
@@ -79,9 +99,7 @@ export default function Logo({
 
   if (orientation === "vertical") {
     return (
-      <div
-        className={`flex flex-col items-center text-center select-none ${className}`}
-      >
+      <div className={`flex flex-col items-center text-center select-none ${className}`}>
         {renderIsotipo()}
         <div className="mt-3 flex flex-col items-center">
           <span
@@ -101,7 +119,7 @@ export default function Logo({
     );
   }
 
-  // Horizontal (Firma por defecto para Navbar y cabeceras)
+  // Horizontal (Firma por defecto para Navbar)
   return (
     <div className={`flex items-center gap-3.5 select-none ${className}`}>
       {renderIsotipo()}
