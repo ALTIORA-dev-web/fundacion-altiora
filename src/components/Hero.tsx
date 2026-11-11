@@ -1,38 +1,17 @@
 import React from "react";
 import Logo from "./Logo";
-import { ArrowUpRight, Heart, Sparkles, MapPin, Users } from "lucide-react";
+import { ArrowUpRight, Heart, Sparkles, Users } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#1B2A49] text-white pt-16 pb-24 lg:pt-24 lg:pb-32">
-      {/* Patrones de fondo geométricos sutiles con flechas ascendentes */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <svg
-          className="absolute -right-20 -bottom-20 w-[600px] h-[600px] text-[#E0A030]"
-          viewBox="0 0 200 200"
-          fill="currentColor"
-        >
-          <path d="M40 160 L100 40 L160 160 H120 V180 H80 V160 Z" />
-        </svg>
-        <svg
-          className="absolute left-10 top-10 w-96 h-96 text-white"
-          viewBox="0 0 200 200"
-          fill="currentColor"
-        >
-          <path d="M40 160 L100 40 L160 160 H120 V180 H80 V160 Z" />
-        </svg>
-      </div>
-
+    <section className="relative overflow-hidden bg-[#1B2A49] text-white pt-16 pb-24 lg:pt-20 lg:pb-28">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Contenido textual */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            {/* Badge de ubicación y concepto */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-medium text-[#E0A030]">
-              <MapPin className="w-3.5 h-3.5" />
-              <span>Luján de Cuyo, Mendoza</span>
-              <span className="text-white/40">•</span>
-              <span className="text-white">Ascender abriendo caminos</span>
+            {/* Logo oficial de la Fundación (Manual Pág. 03 e Imagen 3) */}
+            <div className="flex items-center justify-center lg:justify-start">
+              <Logo variant="inverso" orientation="horizontal" size="lg" />
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading leading-tight">
