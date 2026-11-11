@@ -97,7 +97,14 @@ export default function Footer() {
             <address className="not-italic text-xs text-white/70 space-y-1.5">
               <p>Luján de Cuyo</p>
               <p>Mendoza, República Argentina</p>
-              <p className="pt-2 text-white font-medium">contacto@fundacionaltiora.org.ar</p>
+              <p className="pt-2">
+                <a
+                  href="mailto:altiorafundacion@gmail.com"
+                  className="text-white font-medium hover:text-[#E0A030] transition-colors"
+                >
+                  altiorafundacion@gmail.com
+                </a>
+              </p>
             </address>
 
             <div className="pt-2">

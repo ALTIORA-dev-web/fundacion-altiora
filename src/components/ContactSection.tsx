@@ -127,9 +127,12 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="text-xs uppercase font-bold text-[#4A5568]">Correo Electrónico</h4>
-                  <p className="text-sm font-bold text-[#1B2A49]">
-                    contacto@fundacionaltiora.org.ar
-                  </p>
+                  <a
+                    href="mailto:altiorafundacion@gmail.com"
+                    className="text-sm font-bold text-[#1B2A49] hover:text-[#E0A030] transition-colors"
+                  >
+                    altiorafundacion@gmail.com
+                  </a>
                 </div>
               </div>
 

@@ -108,7 +108,7 @@ export default function AdminPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@fundacionaltiora.org.ar"
+                placeholder="altiorafundacion@gmail.com"
                 className="w-full pl-10 pr-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-[#F7F3EA] text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
               />
             </div>
