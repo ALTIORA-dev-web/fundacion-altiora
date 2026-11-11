@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
-import { ArrowUpRight, Heart, Sparkles, Users } from "lucide-react";
+import { Heart, Sparkles, Users } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -94,16 +94,6 @@ export default function Hero() {
                     </span>
                     <span className="text-[11px] text-[#4A5568] font-semibold">Gestión Transparente</span>
                   </div>
-                </div>
-
-                <div className="w-full pt-1">
-                  <Link
-                    href="/mision"
-                    className="group flex items-center justify-between p-3.5 rounded-xl bg-[#1B2A49] text-white text-xs font-bold hover:bg-[#253961] transition-colors w-full"
-                  >
-                    <span>Conoce el significado de nuestra marca</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#E0A030] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Link>
                 </div>
               </div>
             </div>

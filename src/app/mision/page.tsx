@@ -5,9 +5,9 @@ import MissionAndValues from "@/components/MissionAndValues";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Misión e Identidad | Fundación ALTIORA",
+  title: "Misión | Fundación ALTIORA",
   description:
-    "Promovemos la inclusión social, la igualdad de oportunidades y el desarrollo integral en Luján de Cuyo, Mendoza. Conoce el significado de nuestra identidad institucional y valores.",
+    "Promovemos la inclusión social, la igualdad de oportunidades y el desarrollo integral en Luján de Cuyo, Mendoza.",
 };
 
 export default function MisionPage() {
@@ -22,15 +22,15 @@ export default function MisionPage() {
               Institucional
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold font-heading">
-              Misión e Identidad
+              Nuestra Misión
             </h1>
             <p className="text-base sm:text-lg text-white/80 mt-3 max-w-2xl mx-auto">
-              Ascender abriendo caminos: nuestro propósito, valores y el significado de los símbolos que nos representan.
+              Ascender abriendo caminos: nuestro propósito, valores y compromiso social con la comunidad.
             </p>
           </div>
         </section>
 
-        {/* Contenido completo de Misión, Valores y Manual de Marca */}
+        {/* Contenido de Misión y Valores */}
         <MissionAndValues />
       </main>
       <Footer />

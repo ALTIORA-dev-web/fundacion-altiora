@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import { Compass, Target, ShieldCheck, TrendingUp, Sparkles, ArrowUp, HeartHandshake, CheckCircle } from "lucide-react";
+import { Compass, Target, ShieldCheck, TrendingUp, Sparkles } from "lucide-react";
 
 export default function MissionAndValues() {
   const values = [
@@ -30,29 +29,6 @@ export default function MissionAndValues() {
     },
   ];
 
-  const brandPersonality = [
-    {
-      trait: "Cercana",
-      action: "Hablar con claridad, empatía y respeto absoluto.",
-      color: "border-[#1B2A49]",
-    },
-    {
-      trait: "Confiable",
-      action: "Comunicar datos verificables y compromisos concretos y auditables.",
-      color: "border-[#E0A030]",
-    },
-    {
-      trait: "Inspiradora",
-      action: "Poner siempre el foco en las oportunidades reales de superación.",
-      color: "border-[#1B2A49]",
-    },
-    {
-      trait: "Sobria",
-      action: "Evitar promesas grandilocuentes; responder con trabajo continuo.",
-      color: "border-[#E0A030]",
-    },
-  ];
-
   return (
     <section id="mision" className="py-24 bg-[#F7F3EA] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -60,7 +36,7 @@ export default function MissionAndValues() {
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E0A030]/15 text-[#1B2A49] text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-[#E0A030]" />
-            <span>Nuestra Identidad Institucional</span>
+            <span>Propósito Institucional</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B2A49] font-heading">
@@ -95,7 +71,7 @@ export default function MissionAndValues() {
         </div>
 
         {/* Valores */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((v, i) => {
             const Icon = v.icon;
             return (
@@ -117,130 +93,6 @@ export default function MissionAndValues() {
               </div>
             );
           })}
-        </div>
-
-        {/* ============================================================================== */}
-        {/* SECCIÓN IDENTIDAD Y MANUAL INSTITUCIONAL (Basado en el Manual 2026)           */}
-        {/* ============================================================================== */}
-        <div id="identidad" className="bg-white rounded-3xl p-8 sm:p-12 border border-[#EBE3D3] shadow-md scroll-mt-24">
-          <div className="max-w-3xl mb-12">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1B2A49]/5 text-[#1B2A49] text-xs font-bold uppercase tracking-wider mb-3">
-              <ArrowUp className="w-3.5 h-3.5 text-[#E0A030]" />
-              <span>Manual de Identidad Visual Institucional 2026</span>
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1B2A49] font-heading">
-              El Significado de Nuestro Símbolo
-            </h3>
-            <p className="text-sm sm:text-base text-[#4A5568] mt-2">
-              Un sistema visual coherente y memorable donde cada trazo y color tiene un propósito concreto:
-              <strong> el ascenso convertido en sistema</strong>.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            {/* Visualización del Logo Oficial */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center p-8 bg-[#F7F3EA] rounded-2xl border border-[#EBE3D3] text-center">
-              <div className="w-56 h-56 relative flex items-center justify-center">
-                <Image
-                  src="/brand/logo-completo-transparente.png"
-                  alt="Logotipo Oficial Fundación ALTIORA"
-                  width={220}
-                  height={220}
-                  className="w-full h-full object-contain"
-                  priority
-                />
-              </div>
-              <span className="text-[11px] font-bold text-[#1B2A49] uppercase tracking-widest mt-4">
-                Firma Institucional Original
-              </span>
-              <span className="text-[10px] text-[#4A5568] mt-0.5">
-                Proporción exacta: Isotipo, ALTIORA y descriptor FUNDACIÓN
-              </span>
-            </div>
-
-            {/* Desglose de Elementos del Símbolo */}
-            <div className="lg:col-span-7 space-y-5">
-              <div className="p-5 rounded-2xl bg-[#F7F3EA]/60 border border-[#EBE3D3] flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#1B2A49] text-white flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
-                  01
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#1B2A49] font-heading">
-                    Flecha Exterior (Azul Profundo · #1B2A49)
-                  </h4>
-                  <p className="text-xs text-[#4A5568] mt-1 leading-relaxed">
-                    Representa la <strong>dirección, criterio, avance y estabilidad institucional</strong>.
-                    Guía con solidez los caminos hacia la inclusión social.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-[#F7F3EA]/60 border border-[#EBE3D3] flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#E0A030] text-[#1B2A49] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
-                  02
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#1B2A49] font-heading">
-                    Flecha Interior (Dorado Sol · #E0A030)
-                  </h4>
-                  <p className="text-xs text-[#4A5568] mt-1 leading-relaxed">
-                    Simboliza el <strong>impulso, la calidez y el crecimiento compartido</strong>.
-                    Es la señal de oportunidad y superación activa para las familias de nuestra comunidad.
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-[#F7F3EA]/60 border border-[#EBE3D3] flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white border border-[#EBE3D3] text-[#1B2A49] flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
-                  03
-                </div>
-                <div>
-                  <h4 className="text-base font-bold text-[#1B2A49] font-heading">
-                    Fondo y Atmósfera Marfil (#F7F3EA)
-                  </h4>
-                  <p className="text-xs text-[#4A5568] mt-1 leading-relaxed">
-                    Aporta <strong>cercanía, calidez humana y serenidad institucional</strong>,
-                    diferenciándose de la frialdad corporativa y conectando con el territorio.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Criterio y Tono de Voz */}
-          <div className="mt-12 pt-8 border-t border-[#EBE3D3]">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#1B2A49] mb-4 flex items-center gap-2">
-              <HeartHandshake className="w-4 h-4 text-[#E0A030]" />
-              <span>Nuestra Personalidad y Tono de Comunicación (Manual Pág. 05)</span>
-            </h4>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {brandPersonality.map((item, idx) => (
-                <div
-                  key={idx}
-                  className={`p-4 rounded-xl bg-[#F7F3EA] border-l-4 ${item.color} border-[#EBE3D3]`}
-                >
-                  <span className="block text-sm font-bold text-[#1B2A49] mb-1 font-heading">
-                    {item.trait}
-                  </span>
-                  <span className="text-xs text-[#4A5568] leading-snug block">
-                    {item.action}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Frases de Marca */}
-          <div className="mt-6 p-4 rounded-xl bg-[#1B2A49] text-white flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
-            <div className="flex items-center gap-2 font-medium">
-              <CheckCircle className="w-4 h-4 text-[#E0A030] flex-shrink-0" />
-              <span>Lema: <strong>&ldquo;Juntos, más alto&rdquo;</strong> • Concepto: <strong>&ldquo;Ascender abriendo caminos&rdquo;</strong></span>
-            </div>
-            <span className="text-[#E0A030] font-semibold tracking-wide">
-              &ldquo;Cada paso abre un camino&rdquo;
-            </span>
-          </div>
         </div>
       </div>
     </section>

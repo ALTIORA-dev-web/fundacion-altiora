@@ -11,7 +11,7 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { label: "Misión e Identidad", href: "/mision" },
+    { label: "Misión", href: "/mision" },
     { label: "Áreas de Acción", href: "/areas" },
     { label: "Proyectos", href: "/proyectos" },
     { label: "Voluntariado", href: "/voluntariado" },
