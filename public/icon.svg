@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fondo institucional Marfil (#F7F3EA) con esquinas redondeadas según manual (Pág. 09 y 22) -->
+  <rect width="64" height="64" rx="14" fill="#F7F3EA" />
+  <rect width="64" height="64" rx="14" fill="none" stroke="#EBE3D3" stroke-width="1.5" />
+  <!-- Flecha exterior: Azul profundo (#1B2A49) -->
+  <path
+    d="M 14 50 L 32 18 L 50 50"
+    stroke="#1B2A49"
+    stroke-width="7.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Flecha interior: Dorado Sol (#E0A030) -->
+  <path
+    d="M 23 50 L 32 33 L 41 50"
+    stroke="#E0A030"
+    stroke-width="7.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+</svg>

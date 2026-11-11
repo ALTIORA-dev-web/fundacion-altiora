@@ -33,12 +33,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Fundación ALTIORA" }],
   icons: {
     icon: [
-      { url: "/brand/isotipo-transparente.png" },
-      { url: "/brand/isotipo-transparente.png", sizes: "32x32" },
-      { url: "/brand/isotipo-transparente.png", sizes: "192x192" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/brand/isotipo-transparente.png",
-    apple: "/brand/isotipo-transparente.png",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "Fundación ALTIORA | Juntos, más alto",
