@@ -31,6 +31,15 @@ export const metadata: Metadata = {
     "Ayuda social",
   ],
   authors: [{ name: "Fundación ALTIORA" }],
+  icons: {
+    icon: [
+      { url: "/brand/isotipo-transparente.png" },
+      { url: "/brand/isotipo-transparente.png", sizes: "32x32" },
+      { url: "/brand/isotipo-transparente.png", sizes: "192x192" },
+    ],
+    shortcut: "/brand/isotipo-transparente.png",
+    apple: "/brand/isotipo-transparente.png",
+  },
   openGraph: {
     title: "Fundación ALTIORA | Juntos, más alto",
     description: "Ascender abriendo caminos. Luján de Cuyo, Mendoza.",
