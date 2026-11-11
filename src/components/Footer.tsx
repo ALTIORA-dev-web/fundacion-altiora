@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 import { Heart, Lock } from "lucide-react";
 
@@ -32,29 +33,29 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#mision" className="hover:text-white transition-colors">
+                <Link href="/mision" className="hover:text-white transition-colors">
                   Misión y Visión
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#areas" className="hover:text-white transition-colors">
+                <Link href="/areas" className="hover:text-white transition-colors">
                   Áreas de Acción
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#proyectos" className="hover:text-white transition-colors">
+                <Link href="/proyectos" className="hover:text-white transition-colors">
                   Iniciativas y Proyectos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#transparencia" className="hover:text-white transition-colors">
+                <Link href="/transparencia" className="hover:text-white transition-colors">
                   Transparencia y Balances
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#noticias" className="hover:text-white transition-colors">
+                <Link href="/noticias" className="hover:text-white transition-colors">
                   Noticias y Actualidad
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,24 +67,24 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li>
-                <a href="#voluntariado" className="hover:text-white transition-colors">
+                <Link href="/voluntariado" className="hover:text-white transition-colors">
                   Ser Voluntario
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#donaciones" className="hover:text-white transition-colors">
+                <Link href="/donar" className="hover:text-white transition-colors">
                   Hacer una Donación
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contacto" className="hover:text-white transition-colors">
+                <Link href="/contacto" className="hover:text-white transition-colors">
                   Alianzas Estratégicas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contacto" className="hover:text-white transition-colors">
+                <Link href="/contacto" className="hover:text-white transition-colors">
                   Solicitar Asistencia
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

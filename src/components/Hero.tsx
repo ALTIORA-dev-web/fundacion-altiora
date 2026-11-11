@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Logo from "./Logo";
 import { ArrowUpRight, Heart, Sparkles, Users } from "lucide-react";
 
@@ -27,21 +28,21 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <a
-                href="#donaciones"
+              <Link
+                href="/donar"
                 className="w-full sm:w-auto px-7 py-3.5 bg-[#E0A030] hover:bg-[#C78922] text-[#1B2A49] font-bold text-base rounded-xl shadow-lg shadow-black/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
               >
                 <Heart className="w-5 h-5 fill-[#1B2A49]" />
                 <span>Colaborar con una Donación</span>
-              </a>
+              </Link>
 
-              <a
-                href="#voluntariado"
+              <Link
+                href="/voluntariado"
                 className="w-full sm:w-auto px-7 py-3.5 bg-white/10 hover:bg-white/20 text-white font-semibold text-base rounded-xl border border-white/20 transition-all flex items-center justify-center gap-2"
               >
                 <Users className="w-5 h-5 text-[#E0A030]" />
                 <span>Ser Voluntario</span>
-              </a>
+              </Link>
             </div>
 
             {/* Microcredenciales de impacto */}
@@ -96,13 +97,13 @@ export default function Hero() {
                 </div>
 
                 <div className="w-full pt-1">
-                  <a
-                    href="#identidad"
+                  <Link
+                    href="/mision"
                     className="group flex items-center justify-between p-3.5 rounded-xl bg-[#1B2A49] text-white text-xs font-bold hover:bg-[#253961] transition-colors w-full"
                   >
                     <span>Conoce el significado de nuestra marca</span>
                     <ArrowUpRight className="w-4 h-4 text-[#E0A030] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
