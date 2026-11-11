@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --brand-blue: #1b2a49;
+    --brand-blue-dark: #111b30;
+    --brand-blue-light: #253961;
+    --brand-gold: #e0a030;
+    --brand-gold-hover: #c78922;
+    --brand-gold-light: #fdf5e6;
+    --brand-ivory: #f7f3ea;
+    --brand-ivory-dark: #ebe3d3;
+    --brand-text-dark: #1b2a49;
+    --brand-text-muted: #4a5568;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--brand-ivory);
+  color: var(--brand-text-dark);
+}
+
+/* Clases de utilidad institucional de ALTIORA */
+.bg-brand-blue {
+  background-color: #1b2a49;
+}
+.bg-brand-blue-dark {
+  background-color: #111b30;
+}
+.bg-brand-blue-light {
+  background-color: #253961;
+}
+.bg-brand-gold {
+  background-color: #e0a030;
+}
+.bg-brand-gold-light {
+  background-color: #fdf5e6;
+}
+.bg-brand-ivory {
+  background-color: #f7f3ea;
+}
+.bg-brand-ivory-dark {
+  background-color: #ebe3d3;
+}
+
+.text-brand-blue {
+  color: #1b2a49;
+}
+.text-brand-gold {
+  color: #e0a030;
+}
+.text-brand-gold-hover {
+  color: #c78922;
+}
+.text-brand-ivory {
+  color: #f7f3ea;
+}
+
+.border-brand-blue {
+  border-color: #1b2a49;
+}
+.border-brand-gold {
+  border-color: #e0a030;
+}
+.border-brand-ivory {
+  border-color: #f7f3ea;
 }
