@@ -9,7 +9,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "Misión", href: "#mision" },
+    { label: "Misión e Identidad", href: "#mision" },
     { label: "Áreas de Acción", href: "#areas" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Voluntariado", href: "#voluntariado" },
@@ -24,7 +24,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo ALTIORA */}
           <Link href="/" className="group focus:outline-none">
-            <Logo />
+            <Logo size="md" orientation="horizontal" />
           </Link>
 
           {/* Menú Desktop */}

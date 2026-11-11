@@ -78,16 +78,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Tarjeta Visual de Presentación Institucional */}
+          {/* Tarjeta Visual de Presentación Institucional con Logo Maestro */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="w-full max-w-md bg-[#F7F3EA] rounded-3xl shadow-2xl overflow-hidden text-[#1B2A49] border border-[#EBE3D3] transform lg:rotate-1 hover:rotate-0 transition-transform duration-300">
               <div className="p-8 space-y-6 flex flex-col items-center text-center">
-                {/* Logo vertical oficial según manual */}
-                <div className="py-2">
-                  <Logo orientation="vertical" size="lg" variant="original" />
+                {/* Logo Completo Oficial con máxima nitidez */}
+                <div className="w-full flex justify-center py-2">
+                  <Logo orientation="full-image" size="lg" />
                 </div>
 
-                <div className="w-12 h-0.5 bg-[#E0A030]"></div>
+                <div className="w-16 h-1 bg-[#E0A030] rounded-full"></div>
 
                 <div className="space-y-2">
                   <span className="text-xs font-bold uppercase tracking-widest text-[#E0A030]">
@@ -97,31 +97,31 @@ export default function Hero() {
                     Ascender abriendo caminos
                   </h3>
                   <p className="text-xs text-[#4A5568] leading-relaxed max-w-xs">
-                    Una identidad que simboliza dirección, avance, impulso y crecimiento compartido en Luján de Cuyo, Mendoza.
+                    Dos flechas que simbolizan <strong>dirección institucional</strong> e <strong>impulso compartido</strong> para transformar realidades en Luján de Cuyo, Mendoza.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 w-full pt-2">
+                <div className="grid grid-cols-2 gap-3 w-full pt-1">
                   <div className="p-3.5 rounded-2xl bg-white border border-[#EBE3D3] text-center shadow-sm">
                     <span className="block text-2xl font-extrabold text-[#1B2A49] font-heading">
                       100%
                     </span>
-                    <span className="text-[11px] text-[#4A5568] font-medium">Compromiso Territorial</span>
+                    <span className="text-[11px] text-[#4A5568] font-semibold">Compromiso Territorial</span>
                   </div>
                   <div className="p-3.5 rounded-2xl bg-white border border-[#EBE3D3] text-center shadow-sm">
                     <span className="block text-2xl font-extrabold text-[#E0A030] font-heading">
                       Auditable
                     </span>
-                    <span className="text-[11px] text-[#4A5568] font-medium">Gestión Transparente</span>
+                    <span className="text-[11px] text-[#4A5568] font-semibold">Gestión Transparente</span>
                   </div>
                 </div>
 
                 <div className="w-full pt-1">
                   <a
-                    href="#proyectos"
+                    href="#identidad"
                     className="group flex items-center justify-between p-3.5 rounded-xl bg-[#1B2A49] text-white text-xs font-bold hover:bg-[#253961] transition-colors w-full"
                   >
-                    <span>Conoce nuestras iniciativas</span>
+                    <span>Conoce el significado de nuestra marca</span>
                     <ArrowUpRight className="w-4 h-4 text-[#E0A030] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>

@@ -3,62 +3,68 @@ import Image from "next/image";
 
 interface LogoProps {
   className?: string;
-  variant?: "original" | "inverso" | "monocromo";
-  orientation?: "horizontal" | "vertical" | "isotipo";
+  variant?: "original" | "inverso" | "marfil";
+  orientation?: "horizontal" | "vertical" | "full-image" | "isotipo";
   size?: "sm" | "md" | "lg" | "xl";
-  useImageFile?: boolean;
 }
 
 /**
  * Logotipo Institucional de Fundación ALTIORA
- * Basado estrictamente en los archivos maestros y el Manual de Identidad Visual 2026.
- *
- * Colores oficiales:
- * - Azul profundo: #1B2A49
- * - Dorado sol: #E0A030
- * - Blanco / Marfil: #FFFFFF / #F7F3EA
+ * Cumple estrictamente con el Manual de Identidad Visual Institucional 2026.
+ * Diseñado para que "Fundación ALTIORA" se lea con total claridad y nitidez.
  */
 export default function Logo({
   className = "",
   variant = "original",
   orientation = "horizontal",
   size = "md",
-  useImageFile = true,
 }: LogoProps) {
   const isDarkBg = variant === "inverso";
 
-  // Colores según versión del manual
-  const outerChevronColor = isDarkBg ? "#FFFFFF" : "#1B2A49";
-  const innerChevronColor = "#E0A030";
+  // Colores oficiales del manual
   const titleColor = isDarkBg ? "#FFFFFF" : "#1B2A49";
-  const descriptorColor = isDarkBg ? "rgba(255,255,255,0.85)" : "#1B2A49";
+  const descriptorColor = isDarkBg ? "#E0A030" : "#1B2A49";
 
-  // Dimensiones según tamaño
+  // Dimensiones configuradas para máxima legibilidad
   const dimensions = {
-    sm: { px: 28, box: "w-7 h-7" },
-    md: { px: 42, box: "w-10 h-10" },
-    lg: { px: 64, box: "w-16 h-16" },
-    xl: { px: 96, box: "w-24 h-24" },
+    sm: {
+      icon: 32,
+      box: "w-8 h-8",
+      title: "text-lg font-extrabold tracking-[0.16em]",
+      desc: "text-[10px] font-bold tracking-[0.32em]",
+    },
+    md: {
+      icon: 46,
+      box: "w-11 h-11",
+      title: "text-2xl font-black font-heading tracking-[0.18em]",
+      desc: "text-xs font-bold tracking-[0.36em]",
+    },
+    lg: {
+      icon: 72,
+      box: "w-20 h-20",
+      title: "text-3xl sm:text-4xl font-black font-heading tracking-[0.2em]",
+      desc: "text-sm font-bold tracking-[0.4em]",
+    },
+    xl: {
+      icon: 96,
+      box: "w-28 h-28",
+      title: "text-4xl sm:text-5xl font-black font-heading tracking-[0.22em]",
+      desc: "text-base font-bold tracking-[0.45em]",
+    },
   };
 
-  const textSizes = {
-    sm: { title: "text-base tracking-[0.25em]", desc: "text-[8px] tracking-[0.38em]" },
-    md: { title: "text-xl tracking-[0.25em]", desc: "text-[9px] tracking-[0.42em]" },
-    lg: { title: "text-3xl tracking-[0.28em]", desc: "text-xs tracking-[0.45em]" },
-    xl: { title: "text-4xl tracking-[0.3em]", desc: "text-sm tracking-[0.48em]" },
-  };
+  const current = dimensions[size];
 
-  // Renderizado del Isotipo
-  const renderIsotipo = () => {
-    // Si es fondo claro y tenemos el archivo oficial transparente del diseñador
-    if (useImageFile && !isDarkBg) {
+  // Si se solicita el isotipo solo (para favicons, iconos o sellos de agua)
+  if (orientation === "isotipo") {
+    if (!isDarkBg) {
       return (
-        <div className={`relative ${dimensions[size].box} flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200`}>
+        <div className={`relative ${current.box} flex items-center justify-center flex-shrink-0 ${className}`}>
           <Image
             src="/brand/isotipo-transparente.png"
             alt="Isotipo Fundación ALTIORA"
-            width={dimensions[size].px}
-            height={dimensions[size].px}
+            width={current.icon}
+            height={current.icon}
             className="w-full h-full object-contain"
             priority
           />
@@ -66,50 +72,110 @@ export default function Logo({
       );
     }
 
-    // Versión vectorial SVG (imprescindible para la versión inversa sobre azul/fondos oscuros)
     return (
       <svg
         viewBox="0 0 100 95"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={`${dimensions[size].box} flex-shrink-0 transition-transform duration-200 group-hover:scale-105`}
-        aria-label="Isotipo Fundación ALTIORA"
+        className={`${current.box} flex-shrink-0 ${className}`}
+        aria-label="Isotipo Fundación ALTIORA Inverso"
       >
         <path
           d="M 18 78 L 50 24 L 82 78"
-          stroke={outerChevronColor}
+          stroke="#FFFFFF"
           strokeWidth="11"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M 33 78 L 50 49 L 67 78"
-          stroke={innerChevronColor}
+          stroke="#E0A030"
           strokeWidth="11"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
     );
-  };
-
-  if (orientation === "isotipo") {
-    return <div className={`inline-flex items-center ${className}`}>{renderIsotipo()}</div>;
   }
 
+  // Si se solicita la imagen oficial completa del diseñador (con fondo marfil o transparente)
+  if (orientation === "full-image") {
+    const imgSrc =
+      variant === "marfil"
+        ? "/brand/logo-completo-marfil.png"
+        : "/brand/logo-completo-transparente.png";
+
+    const imgSizes = {
+      sm: { w: 140, h: 140 },
+      md: { w: 200, h: 200 },
+      lg: { w: 280, h: 280 },
+      xl: { w: 360, h: 360 },
+    };
+
+    return (
+      <div className={`relative flex items-center justify-center ${className}`}>
+        <Image
+          src={imgSrc}
+          alt="Fundación ALTIORA"
+          width={imgSizes[size].w}
+          height={imgSizes[size].h}
+          className="object-contain max-w-full h-auto drop-shadow-sm"
+          priority
+        />
+      </div>
+    );
+  }
+
+  // Versión Vertical (Para tarjetas de presentación, portadas y panel admin)
   if (orientation === "vertical") {
     return (
       <div className={`flex flex-col items-center text-center select-none ${className}`}>
-        {renderIsotipo()}
-        <div className="mt-3 flex flex-col items-center">
+        {/* Isotipo */}
+        {!isDarkBg ? (
+          <div className={`relative ${current.box} mb-3 flex items-center justify-center flex-shrink-0`}>
+            <Image
+              src="/brand/isotipo-transparente.png"
+              alt="Isotipo ALTIORA"
+              width={current.icon}
+              height={current.icon}
+              className="w-full h-full object-contain"
+              priority
+            />
+          </div>
+        ) : (
+          <svg
+            viewBox="0 0 100 95"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className={`${current.box} mb-3 flex-shrink-0`}
+          >
+            <path
+              d="M 18 78 L 50 24 L 82 78"
+              stroke="#FFFFFF"
+              strokeWidth="11"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M 33 78 L 50 49 L 67 78"
+              stroke="#E0A030"
+              strokeWidth="11"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        )}
+
+        {/* Tipografía con alta legibilidad */}
+        <div className="flex flex-col items-center">
           <span
-            className={`font-black font-heading uppercase leading-none font-montserrat ${textSizes[size].title}`}
+            className={`font-black uppercase leading-none font-montserrat ${current.title}`}
             style={{ color: titleColor }}
           >
             ALTIORA
           </span>
           <span
-            className={`font-semibold uppercase leading-none mt-1.5 opacity-90 ${textSizes[size].desc}`}
+            className={`uppercase leading-none mt-2 ${current.desc}`}
             style={{ color: descriptorColor }}
           >
             FUNDACIÓN
@@ -119,19 +185,55 @@ export default function Logo({
     );
   }
 
-  // Horizontal (Firma por defecto para Navbar)
+  // Versión Horizontal (Para Header y Barra de Navegación)
   return (
     <div className={`flex items-center gap-3.5 select-none ${className}`}>
-      {renderIsotipo()}
+      {/* Isotipo */}
+      {!isDarkBg ? (
+        <div className={`relative ${current.box} flex items-center justify-center flex-shrink-0`}>
+          <Image
+            src="/brand/isotipo-transparente.png"
+            alt="Isotipo ALTIORA"
+            width={current.icon}
+            height={current.icon}
+            className="w-full h-full object-contain"
+            priority
+          />
+        </div>
+      ) : (
+        <svg
+          viewBox="0 0 100 95"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`${current.box} flex-shrink-0`}
+        >
+          <path
+            d="M 18 78 L 50 24 L 82 78"
+            stroke="#FFFFFF"
+            strokeWidth="11"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M 33 78 L 50 49 L 67 78"
+            stroke="#E0A030"
+            strokeWidth="11"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      )}
+
+      {/* Nombre y descriptor perfectamente legibles */}
       <div className="flex flex-col justify-center">
         <span
-          className={`font-black font-heading uppercase leading-none font-montserrat ${textSizes[size].title}`}
+          className={`font-black uppercase leading-none font-montserrat ${current.title}`}
           style={{ color: titleColor }}
         >
           ALTIORA
         </span>
         <span
-          className={`font-semibold uppercase leading-none mt-1 opacity-90 ${textSizes[size].desc}`}
+          className={`uppercase leading-none mt-1.5 ${current.desc}`}
           style={{ color: descriptorColor }}
         >
           FUNDACIÓN
