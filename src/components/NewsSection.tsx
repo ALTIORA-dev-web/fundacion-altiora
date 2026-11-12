@@ -4,28 +4,28 @@ import { Calendar, ArrowRight, Tag } from "lucide-react";
 export default function NewsSection() {
   const newsList = [
     {
-      title: "Inicio del ciclo de capacitaciones en oficios 2026",
-      category: "Formación",
-      date: "10 de Marzo, 2026",
-      excerpt:
-        "Más de 80 vecinos iniciaron sus trayectorias formativas en talleres de electricidad domiciliaria y diseño gráfico básico.",
-      author: "Equipo ALTIORA",
-    },
-    {
-      title: "Jornada comunitaria de salud y controles preventivos en Luján de Cuyo",
-      category: "Comunidad",
-      date: "24 de Febrero, 2026",
-      excerpt:
-        "Junto a profesionales voluntarios de la salud realizamos controles pediátricos y talleres de hábitos nutricionales saludables.",
-      author: "Comisión de Salud",
-    },
-    {
-      title: "Firma de convenio de cooperación con empresas locales",
+      title: "Otorgamiento de Personería Jurídica Oficial por Resolución DPJ N.º 4.933",
       category: "Institucional",
-      date: "15 de Febrero, 2026",
+      date: "20 de Octubre, 2026",
       excerpt:
-        "Nuevas alianzas público-privadas permitirán ampliar la asistencia alimentaria y la compra de insumos para talleres laborales.",
-      author: "Relaciones Institucionales",
+        "La Dirección de Personas Jurídicas de Mendoza aprobó formalmente la constitución y el estatuto social de Fundación ALTIORA (Expediente EX-2026-06638644).",
+      author: "Consejo de Administración",
+    },
+    {
+      title: "Consolidación de la Identidad Estratégica: «Impulsamos oportunidades. Elevamos futuros.»",
+      category: "Identidad",
+      date: "11 de Noviembre, 2026",
+      excerpt:
+        "Presentación de las bases fundacionales, valores institucionales de dignidad y transparencia, y el modelo de gobierno colegiado ad honorem.",
+      author: "Comunicación Institucional",
+    },
+    {
+      title: "Estructuración del Programa Piloto «ALTIORA Alimenta» con Trazabilidad Integral",
+      category: "Programas",
+      date: "12 de Noviembre, 2026",
+      excerpt:
+        "Finalización del marco lógico y protocolos de inocuidad alimentaria y protección de datos para la primera intervención piloto en el territorio mendocino.",
+      author: "Equipo de Programas",
     },
   ];
 

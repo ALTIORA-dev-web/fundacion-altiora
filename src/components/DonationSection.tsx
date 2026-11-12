@@ -40,12 +40,13 @@ export default function DonationSection() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold font-heading text-white">
-            Tu donación abre caminos y cambia futuros
+            Tu donación abre caminos y genera oportunidades
           </h2>
 
           <p className="text-base text-white/80">
-            Cada aporte se traduce directamente en alimentos, capacitación laboral y
-            educación en Luján de Cuyo. Elige la forma que te sea más cómoda.
+            Cada aporte se destina de forma trazable a programas de asistencia alimentaria,
+            capacitación laboral y desarrollo comunitario en Mendoza. Toda donación cuenta con
+            constancia formal y destino auditado.
           </p>
         </div>
 

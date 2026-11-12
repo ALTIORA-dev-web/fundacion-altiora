@@ -24,7 +24,7 @@ export default function TransparenciaPage() {
               Transparencia Institucional
             </h1>
             <p className="text-base sm:text-lg text-white/80 mt-3 max-w-2xl mx-auto">
-              La confianza pública es nuestro pilar fundamental. Ponemos a disposición abierta balances, memorias y documentación legal.
+              Marco legal formal, personería jurídica por Resolución DPJ N.º 4.933, Consejo de Administración ad honorem y estrictas políticas de integridad y protección de datos.
             </p>
           </div>
         </section>

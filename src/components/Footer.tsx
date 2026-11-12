@@ -12,16 +12,16 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Logo variant="inverso" orientation="horizontal" size="md" />
             <p className="text-xs text-white/70 max-w-sm leading-relaxed">
-              Promovemos la inclusión social, la igualdad de oportunidades y el desarrollo
-              integral de personas, familias y comunidades en situación de vulnerabilidad en
-              Luján de Cuyo, Mendoza.
+              Promovemos el desarrollo integral y la inclusión social en Mendoza mediante
+              programas de asistencia, alimentación, educación, capacitación y fortalecimiento
+              comunitario con dignidad y transparencia.
             </p>
             <div className="pt-2">
               <span className="text-[11px] font-semibold uppercase tracking-wider text-[#E0A030] block">
-                Concepto Institucional
+                Lema Institucional
               </span>
               <span className="text-xs text-white/90 font-medium">
-                Ascender abriendo caminos • Lema: Juntos, más alto
+                «Impulsamos oportunidades. Elevamos futuros.»
               </span>
             </div>
           </div>
@@ -122,8 +122,7 @@ export default function Footer() {
         {/* Créditos y copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 gap-4">
           <p>
-            © 2026 Fundación ALTIORA. Personería Jurídica en trámite /
-            registrada en la Provincia de Mendoza.
+            © 2026 Fundación ALTIORA · Personería Jurídica aprobada por Resolución DPJ N.º 4.933 (Mendoza, Argentina) · Mendoza, República Argentina.
           </p>
 
           <div className="flex items-center gap-1 text-white/60">

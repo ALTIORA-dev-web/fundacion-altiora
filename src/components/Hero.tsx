@@ -16,14 +16,14 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-heading leading-tight">
-              Inclusión social, oportunidades y desarrollo.{" "}
-              <span className="text-[#E0A030] block mt-1">Juntos, más alto.</span>
+              Impulsamos oportunidades.{" "}
+              <span className="text-[#E0A030] block mt-1">Elevamos futuros.</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl font-normal leading-relaxed">
-              En <strong>Fundación ALTIORA</strong> trabajamos día a día para promover
-              la igualdad de oportunidades y el desarrollo integral de personas,
-              familias y comunidades en situación de vulnerabilidad social y económica.
+              En <strong>Fundación ALTIORA</strong> articulamos asistencia inmediata con
+              oportunidades reales de desarrollo personal y comunitario, uniendo cercanía
+              humana, planificación responsable y cooperación interinstitucional en Mendoza.
             </p>
 
             {/* CTAs */}
@@ -33,7 +33,7 @@ export default function Hero() {
                 className="w-full sm:w-auto px-7 py-3.5 bg-[#E0A030] hover:bg-[#C78922] text-[#1B2A49] font-bold text-base rounded-xl shadow-lg shadow-black/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
               >
                 <Heart className="w-5 h-5 fill-[#1B2A49]" />
-                <span>Colaborar con una Donación</span>
+                <span>Sumar tu Aporte</span>
               </Link>
 
               <Link
@@ -45,15 +45,15 @@ export default function Hero() {
               </Link>
             </div>
 
-            {/* Microcredenciales de impacto */}
+            {/* Microcredenciales de rigor */}
             <div className="pt-6 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-white/70">
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-[#E0A030]" />
-                <span>Compromiso de Transparencia</span>
+                <span>Personería Jurídica DPJ Res. N.º 4.933/2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="inline-block w-2 h-2 rounded-full bg-emerald-400"></span>
-                <span>Programas comunitarios activos</span>
+                <span>Compromiso de Trazabilidad Integral</span>
               </div>
             </div>
           </div>

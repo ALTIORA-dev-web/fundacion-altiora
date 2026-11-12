@@ -24,7 +24,7 @@ export default function ProyectosPage() {
               Proyectos e Iniciativas
             </h1>
             <p className="text-base sm:text-lg text-white/80 mt-3 max-w-2xl mx-auto">
-              Iniciativas diseñadas junto a los vecinos para transformar realidades de forma duradera.
+              Cartera de programas misionales y transversales: asistencia alimentaria trazable, capacitación laboral, desarrollo comunitario y voluntariado en Mendoza.
             </p>
           </div>
         </section>

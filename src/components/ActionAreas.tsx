@@ -11,53 +11,52 @@ import {
 export default function ActionAreas() {
   const areas = [
     {
-      id: "asistencia",
-      title: "Asistencia social, alimentaria y comunitaria",
+      id: "alimentacion",
+      title: "Asistencia y Seguridad Alimentaria",
       description:
-        "Respuesta y acompañamiento integral a familias en situación de emergencia y vulnerabilidad con entregas de alimentos, vestimenta y artículos de primera necesidad.",
+        "Garantizamos el acceso a alimentos y bienes esenciales de forma digna, con control de inocuidad, lotes trazables y respeto irrestricto a las familias.",
       icon: UtensilsCrossed,
-      color: "from-blue-900 to-blue-800",
-      badge: "Apoyo Inmediato",
+      badge: "ALTIORA Alimenta",
     },
     {
-      id: "educacion",
-      title: "Educación, formación y capacitación laboral",
+      id: "capacitacion",
+      title: "Capacitación e Inserción Sociolaboral",
       description:
-        "Cursos de oficios, alfabetización digital, talleres prácticos y herramientas que potencian la empleabilidad y el autoempleo juvenil y adulto.",
+        "Diseñamos talleres de oficios, competencias laborales y herramientas prácticas que promueven la autonomía económica y la superación personal.",
       icon: BriefcaseBusiness,
-      badge: "Futuro y Empleo",
+      badge: "ALTIORA Capacita",
     },
     {
-      id: "salud",
-      title: "Promoción de la salud y el bienestar",
+      id: "comunidad",
+      title: "Desarrollo y Articulación Comunitaria",
       description:
-        "Jornadas de prevención de la salud, apoyo psicoemocional, talleres de nutrición saludable y operativos comunitarios en barrios de Luján de Cuyo.",
-      icon: HeartPulse,
-      badge: "Calidad de Vida",
+        "Espacios de escucha activa, relevamiento de necesidades en el territorio y derivación responsable sin duplicar dispositivos del Estado.",
+      icon: UsersRound,
+      badge: "ALTIORA Comunidad",
     },
     {
       id: "desarrollo",
-      title: "Desarrollo humano y fortalecimiento comunitario",
+      title: "Oportunidades de Crecimiento Integral",
       description:
-        "Espacios de encuentro, contención familiar, formación de líderes barriales y actividades socio-culturales que fortalecen el tejido social.",
-      icon: UsersRound,
-      badge: "Comunidad",
+        "Iniciativas formativas y de emprendimiento responsable que permiten a las personas construir proyectos de vida duraderos.",
+      icon: HeartPulse,
+      badge: "ALTIORA Desarrollo",
     },
     {
       id: "voluntariado",
-      title: "Voluntariado y participación ciudadana",
+      title: "Voluntariado Activo y Protegido",
       description:
-        "Canalizamos la vocación solidaria de vecinos, profesionales y estudiantes universitarios para transformar positivamente nuestro entorno.",
+        "Organizamos la participación solidaria con roles claros, inducción ética, resguardo de datos personales y condiciones de seguridad.",
       icon: HandHelping,
-      badge: "Participación",
+      badge: "ALTIORA Solidaria",
     },
     {
-      id: "cooperacion",
-      title: "Cooperación institucional y desarrollo sostenible",
+      id: "alianzas",
+      title: "Cooperación y Redes Multisectoriales",
       description:
-        "Alianzas estratégicas con empresas, organismos gubernamentales, universidades y redes del tercer sector alineadas con los ODS.",
+        "Construimos alianzas transparentes con universidades, empresas privadas y organizaciones del tercer sector para potenciar el impacto social.",
       icon: Globe2,
-      badge: "Alianzas",
+      badge: "Redes y Recursos",
     },
   ];
 

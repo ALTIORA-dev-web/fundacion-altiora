@@ -17,18 +17,20 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Fundación ALTIORA | Juntos, más alto",
+  title: "Fundación ALTIORA | Impulsamos oportunidades. Elevamos futuros.",
   description:
-    "Promovemos la inclusión social, la igualdad de oportunidades y el desarrollo integral de personas, familias y comunidades en Luján de Cuyo, Mendoza.",
+    "Promovemos el desarrollo integral y la inclusión social en Mendoza mediante programas de asistencia alimentaria, capacitación, educación y fortalecimiento comunitario con enfoque de dignidad y transparencia.",
   keywords: [
     "Fundación Altiora",
+    "Altiora Mendoza",
     "Luján de Cuyo",
     "Mendoza",
     "Inclusión social",
-    "Voluntariado",
-    "Donaciones",
+    "Asistencia alimentaria",
+    "Capacitación laboral",
+    "Voluntariado Mendoza",
+    "Transparencia institucional",
     "Desarrollo comunitario",
-    "Ayuda social",
   ],
   authors: [{ name: "Fundación ALTIORA" }],
   icons: {
@@ -40,8 +42,9 @@ export const metadata: Metadata = {
     apple: "/favicon.svg",
   },
   openGraph: {
-    title: "Fundación ALTIORA | Juntos, más alto",
-    description: "Ascender abriendo caminos. Luján de Cuyo, Mendoza.",
+    title: "Fundación ALTIORA | Impulsamos oportunidades. Elevamos futuros.",
+    description:
+      "Articulamos asistencia inmediata con oportunidades reales de desarrollo personal y comunitario en Mendoza.",
     locale: "es_AR",
     type: "website",
   },

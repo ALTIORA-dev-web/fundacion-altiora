@@ -23,12 +23,12 @@ export default function VolunteerSection() {
   }>({ type: null, message: "" });
 
   const areaOptions = [
-    { id: "apoyo_escolar", label: "Apoyo escolar y educación" },
-    { id: "logistica_alimentos", label: "Logística y entrega de alimentos" },
-    { id: "talleres_oficios", label: "Dictado de talleres / capacitación" },
-    { id: "comunicacion", label: "Comunicación, redes y fotografía" },
-    { id: "salud_bienestar", label: "Salud comunitaria y contención" },
-    { id: "eventos", label: "Organización de eventos y campañas" },
+    { id: "alimenta", label: "ALTIORA Alimenta: Logística y entrega de alimentos" },
+    { id: "capacita", label: "ALTIORA Capacita: Talleres de habilidades y oficios" },
+    { id: "comunidad", label: "ALTIORA Comunidad: Acompañamiento territorial y escucha" },
+    { id: "comunicacion", label: "Comunicación institucional, diseño y difusión ética" },
+    { id: "profesional", label: "Apoyo profesional voluntario (social, pedagógico, técnico)" },
+    { id: "eventos", label: "Organización de ferias, campañas y encuentros comunitarios" },
   ];
 
   const handleAreaToggle = (areaId: string) => {
@@ -95,17 +95,17 @@ export default function VolunteerSection() {
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E0A030]/15 text-[#1B2A49] text-xs font-bold uppercase tracking-wider">
               <HandHelping className="w-3.5 h-3.5 text-[#E0A030]" />
-              <span>Participación Ciudadana</span>
+              <span>ALTIORA Solidaria</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1B2A49] font-heading leading-tight">
-              Súmate a nuestro equipo de voluntarios
+              Súmate a nuestro voluntariado protegido y responsable
             </h2>
 
             <p className="text-base text-[#4A5568] leading-relaxed">
-              Tu tiempo, tus talentos y tu vocación pueden transformar vidas. No se
-              requiere experiencia previa, solo el compromiso de construir una sociedad
-              más justa e inclusiva.
+              En ALTIORA organizamos la participación voluntaria con roles definidos, inducción ética,
+              resguardo de datos y condiciones seguras. Tu vocación y tiempo se traducen en
+              oportunidades reales para personas y familias de Mendoza.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -113,11 +113,11 @@ export default function VolunteerSection() {
                 <Sparkles className="w-5 h-5 text-[#E0A030] mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-[#1B2A49]">
-                    Flexibilidad y acompañamiento
+                    Inducción y Cuidado Mutuo
                   </h4>
                   <p className="text-xs text-[#4A5568] mt-1">
-                    Adaptamos las actividades a tus tiempos (jornadas de fin de semana o
-                    proyectos semanales).
+                    Cada voluntario recibe capacitación inicial sobre protocolos de dignidad,
+                    seguridad operativa y confidencialidad en el trato con las familias.
                   </p>
                 </div>
               </div>
@@ -126,11 +126,10 @@ export default function VolunteerSection() {
                 <Check className="w-5 h-5 text-[#1B2A49] mt-0.5 flex-shrink-0" />
                 <div>
                   <h4 className="text-sm font-bold text-[#1B2A49]">
-                    Certificación institucional
+                    Certificación Institucional
                   </h4>
                   <p className="text-xs text-[#4A5568] mt-1">
-                    Emitimos certificados oficiales de horas de voluntariado para tu CV y
-                    desarrollo profesional.
+                    Emitimos acreditación formal de horas y desempeño para tu legajo y desarrollo personal.
                   </p>
                 </div>
               </div>
@@ -341,6 +340,11 @@ export default function VolunteerSection() {
                     </>
                   )}
                 </button>
+
+                <p className="text-[11px] text-[#4A5568] text-center leading-relaxed">
+                  Tus datos personales serán tratados de manera confidencial y utilizados exclusivamente
+                  para la gestión y coordinación del programa de voluntariado de Fundación ALTIORA (Ley Nacional 25.326).
+                </p>
               </form>
             </div>
           </div>

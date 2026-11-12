@@ -283,11 +283,17 @@ export default function ContactSection() {
                       className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-[#F7F3EA] text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
                     >
                       <option value="contacto_general">Consulta general</option>
-                      <option value="solicitud_asistencia">
-                        Solicitud de asistencia directa
-                      </option>
                       <option value="alianzas">
                         Alianza institucional / Cooperación empresarial
+                      </option>
+                      <option value="donacion_especie">
+                        Donación en especie o apoyo logístico
+                      </option>
+                      <option value="solicitud_asistencia">
+                        Orientación y asistencia comunitaria
+                      </option>
+                      <option value="transparencia">
+                        Consulta institucional y transparencia
                       </option>
                       <option value="prensa_institucional">
                         Prensa y medios de comunicación
@@ -326,6 +332,10 @@ export default function ContactSection() {
                     </>
                   )}
                 </button>
+
+                <p className="text-[11px] text-[#4A5568] text-center leading-relaxed">
+                  Tratamiento confidencial según Ley 25.326. La información suministrada se utiliza exclusivamente para responder tu consulta.
+                </p>
               </form>
             </div>
           </div>
