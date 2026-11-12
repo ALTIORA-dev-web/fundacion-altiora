@@ -3,11 +3,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactSection from "@/components/ContactSection";
 import { Metadata } from "next";
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contacto | Fundación ALTIORA",
+  title: "Contacto y Asistencia | Fundación ALTIORA",
   description:
-    "Comunícate con Fundación ALTIORA en Luján de Cuyo, Mendoza. Envíanos tu consulta, solicitud de asistencia o propuesta de alianza.",
+    "Comunícate con Fundación ALTIORA en Mendoza. Canales abiertos para consultas institucionales, alianzas de cooperación o asistencia comunitaria.",
 };
 
 export default function ContactoPage() {
@@ -15,16 +17,24 @@ export default function ContactoPage() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-grow">
-        <section className="bg-[#1B2A49] text-white py-16 text-center">
-          <div className="max-w-4xl mx-auto px-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#E0A030] block mb-2">
+        <section className="bg-gradient-to-b from-[#111B30] to-[#1B2A49] text-white py-16 sm:py-20 text-center relative overflow-hidden">
+          <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#E0A030]/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="max-w-4xl mx-auto px-4 relative z-10 space-y-3">
+            <nav className="flex items-center justify-center gap-2 text-xs text-white/60 mb-2">
+              <Link href="/" className="hover:text-white transition-colors">
+                Inicio
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#E0A030]" />
+              <span className="text-[#E0A030] font-semibold">Contacto</span>
+            </nav>
+            <span className="text-xs font-extrabold uppercase tracking-widest text-[#E0A030] block">
               Canales Abiertos
             </span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold font-heading">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading tracking-tight">
               Contacto y Asistencia
             </h1>
-            <p className="text-base sm:text-lg text-white/80 mt-3 max-w-2xl mx-auto">
-              Nuestras puertas están abiertas. Escríbenos para consultas institucionales, alianzas o pedidos de asistencia.
+            <p className="text-base sm:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed">
+              Nuestras puertas están siempre abiertas para escuchar inquietudes, coordinar alianzas o brindar orientación en Mendoza.
             </p>
           </div>
         </section>

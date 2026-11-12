@@ -1,7 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
-import { HandHelping, Check, Send, AlertCircle, Sparkles } from "lucide-react";
+import {
+  HandHelping,
+  Check,
+  Send,
+  AlertCircle,
+  Sparkles,
+  ShieldCheck,
+  HeartHandshake,
+  Clock,
+  Award,
+} from "lucide-react";
 
 export default function VolunteerSection() {
   const [formData, setFormData] = useState({
@@ -64,7 +74,7 @@ export default function VolunteerSection() {
       setStatus({
         type: "success",
         message:
-          "¡Muchas gracias por postularte a Fundación ALTIORA! Nos pondremos en contacto contigo a la brevedad.",
+          "¡Muchas gracias por postularte a Fundación ALTIORA! Registramos tu interés y nos contactaremos para coordinar una primera charla de inducción.",
       });
 
       setFormData({
@@ -88,12 +98,12 @@ export default function VolunteerSection() {
   };
 
   return (
-    <section id="voluntariado" className="py-24 bg-white border-y border-[#EBE3D3]">
+    <section id="voluntariado" className="py-24 bg-white border-y border-[#EBE3D3] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Lado informativo */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E0A030]/15 text-[#1B2A49] text-xs font-bold uppercase tracking-wider">
+          <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E0A030]/15 text-[#1B2A49] text-xs font-bold uppercase tracking-wider">
               <HandHelping className="w-3.5 h-3.5 text-[#E0A030]" />
               <span>ALTIORA Solidaria</span>
             </div>
@@ -108,28 +118,46 @@ export default function VolunteerSection() {
               oportunidades reales para personas y familias de Mendoza.
             </p>
 
+            {/* Pilares del voluntariado */}
             <div className="space-y-4 pt-2">
-              <div className="p-4 rounded-xl bg-[#F7F3EA] border border-[#EBE3D3] flex items-start gap-3">
-                <Sparkles className="w-5 h-5 text-[#E0A030] mt-0.5 flex-shrink-0" />
+              <div className="p-4.5 rounded-2xl bg-[#F7F3EA] border border-[#EBE3D3] flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-xl bg-white border border-[#EBE3D3] flex items-center justify-center flex-shrink-0 text-[#E0A030]">
+                  <Sparkles className="w-5 h-5" />
+                </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#1B2A49]">
                     Inducción y Cuidado Mutuo
                   </h4>
-                  <p className="text-xs text-[#4A5568] mt-1">
-                    Cada voluntario recibe capacitación inicial sobre protocolos de dignidad,
-                    seguridad operativa y confidencialidad en el trato con las familias.
+                  <p className="text-xs text-[#4A5568] mt-1 leading-relaxed">
+                    Capacitación inicial sobre protocolos de dignidad, seguridad y confidencialidad en el trato con las familias.
                   </p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-[#F7F3EA] border border-[#EBE3D3] flex items-start gap-3">
-                <Check className="w-5 h-5 text-[#1B2A49] mt-0.5 flex-shrink-0" />
+              <div className="p-4.5 rounded-2xl bg-[#F7F3EA] border border-[#EBE3D3] flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-xl bg-white border border-[#EBE3D3] flex items-center justify-center flex-shrink-0 text-[#1B2A49]">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#1B2A49]">
-                    Certificación Institucional
+                    Protección y Responsabilidad (POL-04)
                   </h4>
-                  <p className="text-xs text-[#4A5568] mt-1">
-                    Emitimos acreditación formal de horas y desempeño para tu legajo y desarrollo personal.
+                  <p className="text-xs text-[#4A5568] mt-1 leading-relaxed">
+                    Tareas claramente delimitadas, seguros según actividad y resguardo de datos según la Ley Nacional 25.326.
+                  </p>
+                </div>
+              </div>
+
+              <div className="p-4.5 rounded-2xl bg-[#F7F3EA] border border-[#EBE3D3] flex items-start gap-3.5">
+                <div className="w-9 h-9 rounded-xl bg-white border border-[#EBE3D3] flex items-center justify-center flex-shrink-0 text-[#E0A030]">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-[#1B2A49]">
+                    Acreditación Institucional
+                  </h4>
+                  <p className="text-xs text-[#4A5568] mt-1 leading-relaxed">
+                    Emitimos constancia oficial de participación y horas de voluntariado para tu legajo personal y profesional.
                   </p>
                 </div>
               </div>
@@ -139,34 +167,38 @@ export default function VolunteerSection() {
           {/* Formulario de postulación */}
           <div className="lg:col-span-7">
             <div className="bg-[#F7F3EA] rounded-3xl p-6 sm:p-10 border border-[#EBE3D3] shadow-md">
-              <h3 className="text-2xl font-bold text-[#1B2A49] font-heading mb-1">
-                Formulario de Postulación
-              </h3>
-              <p className="text-xs text-[#4A5568] mb-6">
-                Completa tus datos y nos comunicaremos para coordinar una primera charla.
-              </p>
+              <div className="mb-6">
+                <h3 className="text-2xl font-extrabold text-[#1B2A49] font-heading mb-1">
+                  Formulario de Postulación
+                </h3>
+                <p className="text-xs text-[#4A5568]">
+                  Completa tus datos personales para coordinar una primera entrevista y darte la bienvenida al equipo.
+                </p>
+              </div>
 
               {status.type && (
                 <div
-                  className={`p-4 rounded-xl mb-6 text-sm flex items-start gap-3 ${
+                  className={`p-4.5 rounded-2xl mb-6 text-sm flex items-start gap-3.5 animate-in fade-in duration-200 ${
                     status.type === "success"
-                      ? "bg-emerald-50 text-emerald-800 border border-emerald-200"
-                      : "bg-red-50 text-red-800 border border-red-200"
+                      ? "bg-emerald-50 text-emerald-900 border border-emerald-200"
+                      : "bg-red-50 text-red-900 border border-red-200"
                   }`}
                 >
                   {status.type === "success" ? (
-                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                    <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                    <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
                   )}
-                  <span>{status.message}</span>
+                  <span className="text-xs sm:text-sm font-medium leading-relaxed">
+                    {status.message}
+                  </span>
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
                       Nombre y Apellido *
                     </label>
                     <input
@@ -176,13 +208,31 @@ export default function VolunteerSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, fullName: e.target.value })
                       }
-                      placeholder="Ej. Sofía Morales"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
+                      placeholder="Ej. Martín González"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
+                      DNI / Documento *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.dni}
+                      onChange={(e) =>
+                        setFormData({ ...formData, dni: e.target.value })
+                      }
+                      placeholder="Sin puntos"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
                       Correo Electrónico *
                     </label>
                     <input
@@ -192,15 +242,13 @@ export default function VolunteerSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      placeholder="sofia@ejemplo.com"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
+                      placeholder="nombre@ejemplo.com"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
                     />
                   </div>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
+                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
                       Teléfono / WhatsApp *
                     </label>
                     <input
@@ -211,45 +259,36 @@ export default function VolunteerSection() {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       placeholder="+54 9 261 ..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
-                      DNI (Opcional)
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.dni}
-                      onChange={(e) =>
-                        setFormData({ ...formData, dni: e.target.value })
-                      }
-                      placeholder="Número de documento"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
-                      Ciudad / Localidad
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.city}
-                      onChange={(e) =>
-                        setFormData({ ...formData, city: e.target.value })
-                      }
-                      placeholder="Luján de Cuyo"
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
-                      Profesión / Oficio / Estudio
+                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
+                      Localidad / Departamento
+                    </label>
+                    <select
+                      value={formData.city}
+                      onChange={(e) =>
+                        setFormData({ ...formData, city: e.target.value })
+                      }
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
+                    >
+                      <option value="Luján de Cuyo">Luján de Cuyo</option>
+                      <option value="Godoy Cruz">Godoy Cruz</option>
+                      <option value="Maipú">Maipú</option>
+                      <option value="Guaymallén">Guaymallén</option>
+                      <option value="Ciudad de Mendoza">Ciudad de Mendoza</option>
+                      <option value="Las Heras">Las Heras</option>
+                      <option value="Otra localidad de Mendoza">Otra localidad</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
+                      Ocupación o Profesión
                     </label>
                     <input
                       type="text"
@@ -257,53 +296,53 @@ export default function VolunteerSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, occupation: e.target.value })
                       }
-                      placeholder="Ej. Estudiante, docente, electricista..."
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
+                      placeholder="Ej. Estudiante, docente, logística"
+                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
                     />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
-                      Disponibilidad
-                    </label>
-                    <select
-                      value={formData.availabilityHours}
-                      onChange={(e) =>
-                        setFormData({
-                          ...formData,
-                          availabilityHours: e.target.value,
-                        })
-                      }
-                      className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
-                    >
-                      <option value="fines_de_semana">Fines de semana (Sábados/Domingos)</option>
-                      <option value="mananas">Días hábiles por la mañana</option>
-                      <option value="tardes">Días hábiles por la tarde</option>
-                      <option value="flexible">Flexible / A coordinar</option>
-                    </select>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-2">
-                    Áreas de Interés (Selecciona una o más)
+                  <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
+                    Disponibilidad Horaria
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <select
+                    value={formData.availabilityHours}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        availabilityHours: e.target.value,
+                      })
+                    }
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
+                  >
+                    <option value="fines_de_semana">Fines de semana (jornadas y eventos)</option>
+                    <option value="semana_manana">Días de semana (mañanas)</option>
+                    <option value="semana_tarde">Días de semana (tardes)</option>
+                    <option value="flexible">Flexible / Remoto (apoyo técnico)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-2">
+                    Áreas de interés (selecciona una o más):
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {areaOptions.map((opt) => {
                       const checked = formData.areasOfInterest.includes(opt.id);
                       return (
                         <button
-                          type="button"
                           key={opt.id}
+                          type="button"
                           onClick={() => handleAreaToggle(opt.id)}
-                          className={`px-3 py-2 rounded-xl text-xs font-medium text-left border transition-all flex items-center justify-between ${
+                          className={`px-3.5 py-2.5 rounded-xl border text-left text-xs font-medium transition-all flex items-center justify-between ${
                             checked
-                              ? "bg-[#1B2A49] text-white border-[#1B2A49]"
-                              : "bg-white text-[#1B2A49] border-[#EBE3D3] hover:border-[#1B2A49]/40"
+                              ? "bg-[#1B2A49] text-white border-[#1B2A49] shadow-xs"
+                              : "bg-white text-[#1B2A49] border-[#EBE3D3] hover:border-[#E0A030]"
                           }`}
                         >
-                          <span>{opt.label}</span>
-                          {checked && <Check className="w-3.5 h-3.5 text-[#E0A030]" />}
+                          <span className="pr-2">{opt.label}</span>
+                          {checked && <Check className="w-4 h-4 text-[#E0A030] flex-shrink-0" />}
                         </button>
                       );
                     })}
@@ -311,7 +350,7 @@ export default function VolunteerSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-bold text-[#1B2A49] uppercase tracking-wider mb-1.5">
                     ¿Qué te motiva a sumarte a Fundación ALTIORA? *
                   </label>
                   <textarea
@@ -322,14 +361,14 @@ export default function VolunteerSection() {
                       setFormData({ ...formData, motivation: e.target.value })
                     }
                     placeholder="Cuéntanos brevemente sobre ti y en qué te gustaría aportar..."
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none focus:ring-2 focus:ring-[#E0A030]"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-[#EBE3D3] bg-white text-sm text-[#1B2A49] focus:outline-none transition-all"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full py-3.5 bg-[#1B2A49] hover:bg-[#253961] text-white font-bold text-sm rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 disabled:opacity-50"
+                  className="w-full py-4 bg-[#1B2A49] hover:bg-[#253961] text-white font-extrabold text-sm rounded-xl transition-all shadow-md flex items-center justify-center gap-2 disabled:opacity-50 active:scale-98 cursor-pointer"
                 >
                   {loading ? (
                     <span>Enviando postulación...</span>
